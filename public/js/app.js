@@ -15,7 +15,7 @@ function take_snapshot() {
         document.getElementById('snapshot').innerHTML = '<img src="'+data_uri+'"/>';
 		// snap complete, image data is in 'data_uri'
 		
-		Webcam.upload( data_uri, 'myscript.php', function(code, text) {
+      Webcam.upload( data_uri, 'https://lingua-v4.herokuapp.com/image', function(code, text) {
 			// Upload complete!
 			// 'code' will be the HTTP response code from the server, e.g. 200
 			// 'text' will be the raw response content
